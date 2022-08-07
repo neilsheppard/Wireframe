@@ -11,6 +11,4 @@ export_presets.cfg
 data_*/
 
 # macOS
-*/*.DS_Store
-
 .DS_Store
