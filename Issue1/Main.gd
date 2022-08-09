@@ -1,6 +1,7 @@
 extends Node2D
 
 var explosion = preload("res://Particle.tscn")
+var particle_explosions = preload("res://CPUParticles2D.tscn")
 var rng = RandomNumberGenerator.new()
 
 # the size of the screen
@@ -28,6 +29,9 @@ func explode_random():
 	
 	# call the explosion function for that position
 	explode(x, y)
+	
+	# call the particles function
+	# particles(x,y)
 		
 func explode(x, y):
 	# generate 100 "particles"
@@ -51,3 +55,8 @@ func explode(x, y):
 		
 		# call explode function
 		i_explosion.explode()
+
+func particles(x, y):
+	var i_particles = particle_explosions.instance()
+	add_child(i_particles)
+	i_particles.position = Vector2(x,y)
