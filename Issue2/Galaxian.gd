@@ -21,7 +21,7 @@ func _ready():
 func add_alien():
 	var i_alien = alien.instance()
 	add_child(i_alien)
-	i_alien.position = Vector2(200, 100)
+	i_alien.position = Vector2(100, 100)
 	i_alien.move()
 
 func move_alien():
