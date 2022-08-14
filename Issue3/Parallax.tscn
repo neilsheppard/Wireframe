@@ -9,13 +9,13 @@
 script = ExtResource( 4 )
 
 [node name="Back" type="Sprite" parent="."]
-position = Vector2( 800, 200 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="Middle" type="Sprite" parent="."]
-position = Vector2( 800, 200 )
 texture = ExtResource( 2 )
+centered = false
 
 [node name="Front" type="Sprite" parent="."]
-position = Vector2( 800, 200 )
 texture = ExtResource( 3 )
+centered = false
