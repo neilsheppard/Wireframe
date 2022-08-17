@@ -18,7 +18,7 @@ func _ready():
 	middle_layer_size = (middle_layer.texture.get_size().x / 2)
 	back_layer_size = (back_layer.texture.get_size().x / 2)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	front_layer.position.x -= front_speed
 	middle_layer.position.x -= middle_speed
 	back_layer.position.x -= back_speed
