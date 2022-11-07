@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
 
-export (int) var run_speed = 10
+export (int) var run_speed = 8
 export (int) var jump_speed = -400
 export (int) var gravity = 800
 export (int) var inertia = 300
-export (int) var max_speed = 200
+export (int) var max_speed = 160
 
 var velocity = Vector2()
 var jumping = false
@@ -35,7 +35,6 @@ func get_input():
 	if Input.is_key_pressed(KEY_SPACE) and is_on_floor():
 		jumping = true
 		velocity.y = jump_speed
-	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
