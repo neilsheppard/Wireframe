@@ -17,13 +17,13 @@ func _ready():
 	pass # Replace with function body.
 
 func get_input():	
-	if Input.is_key_pressed(KEY_LEFT) and (position.x - sprite.texture.get_width() / 2) > 0:
+	if Input.is_key_pressed(KEY_LEFT):
 		if abs(velocity.x) <= max_speed:
 			velocity.x -= run_speed
 		if velocity.x < max_speed * -1:
 			velocity.x = max_speed * -1
 		stopping = false
-	elif Input.is_key_pressed(KEY_RIGHT) and (position.x + sprite.texture.get_width() / 2) < 800:
+	elif Input.is_key_pressed(KEY_RIGHT):
 		if abs(velocity.x) <= max_speed:
 			velocity.x += run_speed		
 		if velocity.x > max_speed:
@@ -36,7 +36,7 @@ func get_input():
 		jumping = true
 		velocity.y = jump_speed
 	
-			
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	get_input()
